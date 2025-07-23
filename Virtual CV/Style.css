@@ -1,4 +1,4 @@
-/* style.css */
+/* Updated style.css */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -7,23 +7,28 @@ body {
   color: #1a1a1a;
   line-height: 1.6;
 }
+
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+
 .header {
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 2rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/header-bg.jpg') center/cover no-repeat;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 3rem 0;
   text-align: center;
 }
+
 .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .profile-pic {
   width: 150px;
   height: 150px;
@@ -32,72 +37,103 @@ body {
   border: 4px solid #f0f0f0;
   margin-bottom: 1rem;
 }
+
 h1 {
   margin-bottom: 0.5rem;
   font-size: 2.25rem;
-  color: #222;
+  color: #ffffff;
 }
+
 .tagline {
   font-size: 1.1rem;
-  color: #555;
+  color: #f0f0f0;
 }
+
 .nav {
   margin-top: 1rem;
 }
+
 .nav a {
   margin: 0 0.75rem;
   text-decoration: none;
-  color: #007acc;
+  color: #aad8ff;
   font-weight: 600;
   transition: color 0.3s ease;
 }
+
 .nav a:hover {
-  color: #005f99;
+  color: #ffffff;
 }
+
 .social-links {
   margin-top: 1rem;
 }
+
 .social-links a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: #333;
+  color: #e0e0e0;
   font-weight: bold;
 }
+
 .section {
   padding: 4rem 0;
-  background: #fff;
+  background: #ffffff;
+  position: relative;
 }
-.section.light {
-  background: #f9f9f9;
+
+.section:nth-of-type(even) {
+  background: #f2f2f7;
 }
+
+.section:nth-of-type(odd) {
+  background: #ffffff;
+}
+
+.section::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 3rem;
+  background: #ccc;
+  opacity: 0.3;
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .resume-grid, .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
 .project-card {
-  background: #fff;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   padding: 1.5rem;
   transition: transform 0.3s ease;
 }
+
 .project-card:hover {
   transform: translateY(-5px);
 }
+
 .skills-list {
   list-style: none;
   padding-left: 0;
   columns: 2;
 }
+
 .skills-list li {
   margin-bottom: 0.5rem;
 }
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -108,26 +144,31 @@ h2 {
   text-decoration: none;
   transition: background 0.3s ease;
 }
+
 .btn:hover {
   background: #005f99;
 }
+
 .footer {
   background: #f0f0f0;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
 }
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
 }
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @media (max-width: 600px) {
   .header-content {
     text-align: center;
